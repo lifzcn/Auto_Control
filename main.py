@@ -1,3 +1,9 @@
+# -*- coding : utf-8 -*-
+# @File : main.py
+# @Author : Leonard
+# @Time : 2022/01/09 11:36:03
+
+
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from interface import Ui_Form
@@ -23,7 +29,7 @@ class mainWindow(QWidget, Ui_Form):
         elif self.checkBox_Bode.isChecked():
             plt.plot(ctrl.bode(f))
             plt.savefig("bode.jpg")
-        
+
     def exit(self, parent=None):
         sys.exit(app.exec_())
 
